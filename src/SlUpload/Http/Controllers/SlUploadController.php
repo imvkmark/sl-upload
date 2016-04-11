@@ -24,8 +24,8 @@ class SlUploadController extends Controller {
 	 * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
 	 */
 	public function postImage(Request $request) {
-		$field  = $request->input('field', 'image_file');
-		$sign   = $request->input('upload_token', '');
+		$field = $request->input('field', 'image_file');
+		$sign  = $request->input('upload_token', '');
 
 		// 匹配
 		$file  = \Input::file($field);
@@ -33,8 +33,8 @@ class SlUploadController extends Controller {
 		if ($Image->checkUpload($sign) && $Image->save($file)) {
 			return site_end('success', '图片上传成功', [
 				'json'        => true,
-				'success'     => 1,                         // editormd
-				'message'     => '上传成功',                 // editormd
+				'success'     => 1,                    // editormd
+				'message'     => '上传成功',            // editormd
 				'url'         => $Image->getUrl(),     // editormd
 				'destination' => $Image->getDestination(),
 			]);
