@@ -1,8 +1,8 @@
 <?php namespace Imvkmark\SlUpload\Action;
 
 use App\Lemon\Action\ActionBasic;
-use App\Lemon\Helper\LmEnv;
-use App\Lemon\Helper\LmImage;
+use App\Lemon\Repositories\Sour\LmEnv;
+use App\Lemon\Repositories\Sour\LmImage;
 use App\Lemon\Project\SysCrypt;
 use Imvkmark\SlUpload\Helper\SlUpload;
 use Imvkmark\SlUpload\Models\SlImageKey;

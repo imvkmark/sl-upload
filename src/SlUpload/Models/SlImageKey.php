@@ -1,6 +1,6 @@
 <?php namespace Imvkmark\SlUpload\Models;
 
-use App\Lemon\Helper\LmStr;
+use App\Lemon\Repositories\Sour\LmStr;
 
 /**
  * This file is part of Sl Upload,

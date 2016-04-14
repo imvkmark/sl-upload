@@ -1,7 +1,7 @@
 <?php namespace Imvkmark\SlUpload\Helper;
 
-use App\Lemon\Helper\LmEnv;
-use App\Lemon\Helper\LmUtil;
+use App\Lemon\Repositories\Sour\LmEnv;
+use App\Lemon\Repositories\Sour\LmUtil;
 use App\Lemon\Project\SysCrypt;
 use Imvkmark\SlUpload\Models\SlImageKey;
 

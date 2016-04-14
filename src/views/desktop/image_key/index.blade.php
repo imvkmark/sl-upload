@@ -1,4 +1,4 @@
-@extends('_layout.desktop')
+@extends('lemon.template.desktop')
 @section('desktop-main')
 	<div class="page-fixed">
 		@include('sl-upload::desktop.image_key.header')

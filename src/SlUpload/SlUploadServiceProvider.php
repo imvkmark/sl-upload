@@ -37,6 +37,8 @@ class SlUploadServiceProvider extends ServiceProvider {
 	 */
 	public function register() {
 		$this->registerCommands();
+
+		$this->mergeConfig();
 	}
 
 	/**
@@ -56,6 +58,16 @@ class SlUploadServiceProvider extends ServiceProvider {
 		$this->app->singleton('command.lemon.upload_migration', function ($app) {
 			return new MigrationCommand();
 		});
+	}
+
+	/**
+	 * Merges user's and sl-upload's configs.
+	 * @return void
+	 */
+	private function mergeConfig() {
+		$this->mergeConfigFrom(
+			__DIR__ . '/../config/config.php', 'sl-upload'
+		);
 	}
 
 }
